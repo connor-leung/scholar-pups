@@ -24,5 +24,14 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sidebar.html",
+        "sidebar.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
