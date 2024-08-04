@@ -8,8 +8,6 @@ import { CiHeart } from "react-icons/ci";
 import { FaRegCircleQuestion } from "react-icons/fa6";
 import { FaRegBell } from "react-icons/fa";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { useRouter } from 'next/router';
-
 
 const Navbar = () => {
   return (
