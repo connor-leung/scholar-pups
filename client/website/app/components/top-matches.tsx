@@ -32,7 +32,7 @@ const TopMatches = () => {
                         <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$100,000 CAD</h1>
                     </div>
                     </div>
-                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold">Loran Scholar</h1>
+                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Loran Scholar</h1>
                     <h1 className="text-[#808080] text-[13px]">Due on July 10th • Canada</h1>
                 </div>
 
@@ -43,7 +43,7 @@ const TopMatches = () => {
                         <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$1,500 CAD</h1>
                     </div>
                     </div>
-                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold">RBC Scholarship</h1>
+                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">RBC Scholarship</h1>
                     <h1 className="text-[#808080] text-[13px]">Due on April 12th • Canada</h1>
                 </div>
 
@@ -54,7 +54,7 @@ const TopMatches = () => {
                         <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$4,000 CAD</h1>
                     </div>
                     </div>
-                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold">Diversity Scholarship</h1>
+                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Diversity Scholarship</h1>
                     <h1 className="text-[#808080] text-[13px]">Due on May 19th • Canada</h1>
                 </div>
             </div>
