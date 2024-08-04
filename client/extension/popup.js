@@ -57,7 +57,7 @@ function copyAndSendTextareasAndShowSidebar() {
     textarea.select();
     document.execCommand('copy');
     // document.body.removeChild(textarea);
-    alert('Copied text to clipboard!\nSending text to API... \n' + allText);
+    alert('Reviewing... \n' + allText);
     
     const apiUrl = 'http://127.0.0.1:8000/review';  // Ensure your FastAPI server is running on this URL
     // alert('Sending text to API:' + allText);
