@@ -9,33 +9,8 @@ document.getElementById('copyButton').addEventListener('click', () => {
 
 function copyAndSendTextareasAndShowSidebar() {
     function showSidebar(content) {
-        
-
-        // Create the sidebar container if it doesn't exist
-        if (!document.getElementById('sidebar-container')) {
-            const sidebarContainer = document.createElement('div');
-            sidebarContainer.id = 'sidebar-container';
-            sidebarContainer.style.cssText = `
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 300px;
-                height: 100%;
-                background-color: white;
-                box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-                overflow-y: auto;
-                z-index: 1000;
-                padding: 20px;
-            `;
-            document.body.appendChild(sidebarContainer);
-
-            // Load the sidebar content
-            loadSidebarContent();
-        } else {
-            // If the sidebar already exists, just load the content
-            loadSidebarContent();
-        }
         let sidebarContainer = document.getElementById('sidebar-container');
+
         if (!sidebarContainer) {
             sidebarContainer = document.createElement('div');
             sidebarContainer.id = 'sidebar-container';
@@ -53,20 +28,14 @@ function copyAndSendTextareasAndShowSidebar() {
             `;
             document.body.appendChild(sidebarContainer);
         }
-        dogClose = 'images/dog-close.svg';
-        dogOpen = 'images/dog-open.svg';
+        const sentences = content.split('. ');
         sidebarContainer.innerHTML = `
-            <div id="sidebar-container">
-                <div class="header">
-                    <div class="logo-container">
-                        <img src=${dogClose} alt="Scholar Pups Logo 1" class="logo logo1">
-                        <img src=${dogOpen} alt="Scholar Pups Logo 2" class="logo logo2">
-                    </div>
-                    <h2>Your personal scholarship coach</h2>
-                </div>
-                <div id="sidebar-content">${content}</div>
-                <button id="close-sidebar">Close</button>
-            </div>
+            <h2>Your personal scholarship coach with Professor Puppy</h2>
+            <div id="sidebar-content" style="padding-top: 10px; padding-bottom: 10px;">${sentences[0].replace('"', '')}</div>
+            <div style="padding-top: 10px; padding-bottom: 10px;" id="sidebar-content">${sentences[1]}</div>
+            <div id="sidebar-content" style="padding-top: 10px; padding-bottom: 10px;">${sentences[2]}</div>
+            <div id="sidebar-content" style="padding-top: 10px; padding-bottom: 10px;">${sentences[3].replace('"', '')}</div>
+            <button id="close-sidebar style="background-color: #73B4EF; border: none; color: white; padding: 10px 20px; border-radius: 50px; font-size: 16px; display: inline-block;text-align: center;">Close</button>
         `;
         
         document.getElementById('close-sidebar').addEventListener('click', () => {

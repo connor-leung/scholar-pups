@@ -55,15 +55,12 @@ class QuestionRequest(BaseModel):
 
 @app.post("/review")
 async def review(request: QuestionRequest):
-    cached = """
-    1.  **Revisit Your Introduction**: Begin your essay with a hook that grabs the reader's attention. This can be a personal anecdote, a relevant quote, or an interesting fact related to social work and justice.
-    2.  **Provide More Specific Examples**: While your passion for social justice is evident, it would be beneficial to include more specific examples from your academic and professional experiences that demonstrate your commitment to this field. Consider using the STAR method (Situation, Task, Action, Result) when narrating these stories.
-    3.  **Quantify Your Impact**: To make a stronger case for why you deserve the scholarship, try to quantify your impact on the community. For instance, if you volunteered with the Black Youth Helpline, mention how many hours you spent helping youth or what specific skills you taught them."""
+    cached = "1) Revisit Your Introduction: Begin your essay with a hook that grabs the reader's attention which can be a personal anecdote, a relevant quote, or an interesting fact related to social work and justice. 2)  Provide More Specific Examples: While your passion for social justice is evident, it would be beneficial to include more specific examples from your academic and professional experiences that demonstrate your commitment to this field which you may consider using the STAR method (Situation, Task, Action, Result) when narrating these stories. 3)  Quantify Your Impact: To make a stronger case for why you deserve the scholarship, try to quantify your impact on the community; for instance, if you volunteered with the Black Youth Helpline, mention how many hours you spent helping youth or what specific skills you taught them."
    
     try:
         if isinstance(request.question, str):
             advice = get_suggestions(request.question, 0)
-            return f"Based on the provided content, here are some specific instructions and suggestions to further improve your English delivery relative to the prompt of the application: {cached}"
+            return f'Based on the provided content, here are some specific instructions and suggestions to further improve your English delivery relative to the prompt of the application. {cached}'
             # return f"Review for question: {request.question}"
         else:
             raise HTTPException(status_code=400, detail="Invalid input type")
