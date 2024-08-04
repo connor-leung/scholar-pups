@@ -1,6 +1,3 @@
-import Image from "next/image";
-'use client';
-import { useUser } from '@auth0/nextjs-auth0/client';
 import Navbar from '../app/components/Navbar';
 import IntroBox from "./components/intro-box";
 import Recent from "./components/recent";
@@ -9,14 +6,9 @@ import TopMatches from "./components/top-matches";
 import React from "react";
 import Head from 'next/head'
 
-
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>test</title>
-      </Head>
-      
       <main className="bg-white min-h-screen">
           <Navbar />
           <IntroBox />

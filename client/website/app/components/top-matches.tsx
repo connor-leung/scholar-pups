@@ -18,44 +18,44 @@ const TopMatches = () => {
                     <div className="flex items-center justify-between mb-4">
                     <img className="h-20" src="td.svg" alt="TD Logo" />
                     <div className="bg-[#73AAE8] rounded-full px-4 py-1 flex items-center" style={{ backgroundColor: 'rgba(115, 170, 232, 0.3)' }}>
-                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$70,000 CAD</h1>
+                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk whitespace-nowrap">$70,000 CAD</h1>
                     </div>
                     </div>
                     <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">TD Community Scholarship</h1>
-                    <h1 className="text-[#808080] text-[13px]">Due on August 9th • Canada</h1>
+                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on August 9th • Canada</h1>
                 </div>
 
                 <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
                     <div className="flex items-center justify-between mb-4">
                     <img className="h-20" src="loran.svg" alt="Loran Logo" />
                     <div className="bg-[#73AAE8] rounded-full px-4 py-1 flex items-center" style={{ backgroundColor: 'rgba(115, 170, 232, 0.3)' }}>
-                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$100,000 CAD</h1>
+                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotes whitespace-nowrapk">$100,000 CAD</h1>
                     </div>
                     </div>
                     <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Loran Scholar</h1>
-                    <h1 className="text-[#808080] text-[13px]">Due on July 10th • Canada</h1>
+                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on July 10th • Canada</h1>
                 </div>
 
                 <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
                     <div className="flex items-center justify-between mb-4">
                     <img className="h-20" src="rbc.svg" alt="RBC Logo" />
                     <div className="bg-[#73AAE8] rounded-full px-4 py-1 flex items-center" style={{ backgroundColor: 'rgba(115, 170, 232, 0.3)' }}>
-                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$1,500 CAD</h1>
+                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk whitespace-nowrap">$1,500 CAD</h1>
                     </div>
                     </div>
                     <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">RBC Scholarship</h1>
-                    <h1 className="text-[#808080] text-[13px]">Due on April 12th • Canada</h1>
+                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on April 12th • Canada</h1>
                 </div>
 
                 <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
                     <div className="flex items-center justify-between mb-4">
                     <img className="h-20" src="atla.svg" alt="ATLA Logo" />
                     <div className="bg-[#73AAE8] rounded-full px-4 py-1 flex items-center" style={{ backgroundColor: 'rgba(115, 170, 232, 0.3)' }}>
-                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk">$4,000 CAD</h1>
+                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk whitespace-nowrap">$4,000 CAD</h1>
                     </div>
                     </div>
                     <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Diversity Scholarship</h1>
-                    <h1 className="text-[#808080] text-[13px]">Due on May 19th • Canada</h1>
+                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on May 19th • Canada</h1>
                 </div>
             </div>
         </>
