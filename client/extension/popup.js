@@ -9,6 +9,32 @@ document.getElementById('copyButton').addEventListener('click', () => {
 
 function copyAndSendTextareasAndShowSidebar() {
     function showSidebar(content) {
+        
+
+        // Create the sidebar container if it doesn't exist
+        if (!document.getElementById('sidebar-container')) {
+            const sidebarContainer = document.createElement('div');
+            sidebarContainer.id = 'sidebar-container';
+            sidebarContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100%;
+                background-color: white;
+                box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+                overflow-y: auto;
+                z-index: 1000;
+                padding: 20px;
+            `;
+            document.body.appendChild(sidebarContainer);
+
+            // Load the sidebar content
+            loadSidebarContent();
+        } else {
+            // If the sidebar already exists, just load the content
+            loadSidebarContent();
+        }
         let sidebarContainer = document.getElementById('sidebar-container');
         if (!sidebarContainer) {
             sidebarContainer = document.createElement('div');
@@ -27,11 +53,20 @@ function copyAndSendTextareasAndShowSidebar() {
             `;
             document.body.appendChild(sidebarContainer);
         }
-        
+        dogClose = 'images/dog-close.svg';
+        dogOpen = 'images/dog-open.svg';
         sidebarContainer.innerHTML = `
-            <h2>API Response</h2>
-            <div id="sidebar-content">${content}</div>
-            <button id="close-sidebar">Close</button>
+            <div id="sidebar-container">
+                <div class="header">
+                    <div class="logo-container">
+                        <img src=${dogClose} alt="Scholar Pups Logo 1" class="logo logo1">
+                        <img src=${dogOpen} alt="Scholar Pups Logo 2" class="logo logo2">
+                    </div>
+                    <h2>Your personal scholarship coach</h2>
+                </div>
+                <div id="sidebar-content">${content}</div>
+                <button id="close-sidebar">Close</button>
+            </div>
         `;
         
         document.getElementById('close-sidebar').addEventListener('click', () => {
