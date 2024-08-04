@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
         <div className="flex flex-row justify-between px-20 space-x-10 p-2 border-[#f0f0f0] border-y-2">
-            <img alt="logo" src="logo.svg" />
+            <img alt="main logo" src="main-dog.svg" />
             <div className="text-black text-[20px] font-spaceGrotesk font-bold flex items-center">
                 <Link href="/dashboard" className="flex items-center space-x-2">
                     <FiHome className="flex items-center space-x-2" />
@@ -49,7 +49,9 @@ const Navbar = () => {
                 <FaRegCircleQuestion className="w-6 h-6 text-black" />
                 <FaRegBell className="w-6 h-6 text-black" />
                 <div className="h-12 border-2 rounded-full border-[#f0f0f0]"></div>
-                <img className="w-14 h-14 object-cover" src="yellow-dog.svg"/>
+                <Link href="/login" className="flex items-center space-x-2">
+                    <img className="w-14 h-14 object-cover cursor-pointer" src="yellow-dog.svg" alt="Yellow Dog" />
+                </Link>
                 <IoIosArrowDropdown className='w-6 h-6 text-black'/>
             </div>
         </div>  
