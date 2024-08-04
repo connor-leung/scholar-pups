@@ -12,7 +12,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 const Navbar = () => {
   return (
     <>
-        <div className="flex flex-row justify-between px-20 space-x-10 p-5 border-[#f0f0f0] border-y-2">
+        <div className="flex flex-row justify-between px-20 space-x-10 p-2 border-[#f0f0f0] border-y-2">
             <img alt="logo" src="logo.svg" />
             <div className="text-black text-[20px] font-spaceGrotesk font-bold flex items-center">
                 <Link href="/dashboard" className="flex items-center space-x-2">
@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className='text-black text-[20px] space-x-4 font-spaceGrotesk font-bold flex items-center'>
                 <FaRegCircleQuestion className="w-6 h-6 text-black" />
                 <FaRegBell className="w-6 h-6 text-black" />
-                <div className="h-20 border-2 rounded-full border-[#f0f0f0]"></div>
+                <div className="h-12 border-2 rounded-full border-[#f0f0f0]"></div>
                 <img className="w-14 h-14 object-cover" src="yellow-dog.svg"/>
                 <IoIosArrowDropdown className='w-6 h-6 text-black'/>
             </div>

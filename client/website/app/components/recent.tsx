@@ -17,7 +17,10 @@ const Recent = () => {
                     </div>
                         <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold pt-3 whitespace-nowrap">TD Community Scholarship</h1>
                         <h1 className="text-[#808080] text-[13px]">Due on August 9th • Canada</h1>
-                    <div className="mt-4 w-full border-t-2 border-[#f0f0f0]" />
+                    <div className="mt-4 pt-2 w-full border-t-2 border-[#f0f0f0] flex justify-between">
+                        <h1 className="text-black font-spaceGrotesk text-[#3F525B]">Save</h1>
+                        <h1 className="text-black font-spaceGrotesk text-[#3F525B]">More Details</h1>
+                    </div>
                     </div>
 
                     <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
@@ -29,7 +32,12 @@ const Recent = () => {
                         </div>
                             <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">GrantMe Scholarship</h1>
                             <h1 className="text-[#808080] text-[13px]">Due on December 9th • Canada</h1>
-                    </div>
+                            <div className="mt-4 pt-2 w-full border-t-2 border-[#f0f0f0] flex justify-between">
+                                <h1 className="text-black font-spaceGrotesk text-[#3F525B]">Save</h1>
+                                <h1 className="text-black font-spaceGrotesk text-[#3F525B]">More Details</h1>
+                            </div>
+                        </div>
+                        
 
                     <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
                         <div className="flex items-center justify-between mb-4">
