@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="sidebar.css">
+    <style>
+        #sidebar-container {
+            position: fixed;
+            top: 0;
+            /* right: -300px;  */
+            width: 300px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            overflow-y: auto;
+            z-index: 1000;
+            padding: 20px;
+            transition: right 0.5s ease; /* Transition effect */
+        }
+
+        #sidebar-container.visible {
+            right: 0; /* Slide in */
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 48px;
+            height: 48px;
+        }
+
+        .logo {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .logo1 {
+            animation: fadeInOut 4s infinite;
+        }
+
+        .logo2 {
+            animation: fadeInOut 4s infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 1; }
+            25% { opacity: 0; }
+            50% { opacity: 0; }
+            75% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+        .speech-bubble {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: #f0f0f0;
+            border-left: 0;
+            margin-top: -10px;
+        }
+
+        #sidebar-container h2 {
+            margin: 0;
+        }
+
+        #close-sidebar {
+            margin-top: 20px;
+        }
+
+        .content-bubble {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .content-bubble::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: #f0f0f0;
+            border-left: 0;
+            margin-top: -10px;
+        }
+    </style>
 </head>
 <body>
     <div id="sidebar-container">
-        <h2>Your personal scholarship coach</h2>
-        <div id="sidebar-content"></div>
+        <div class="header">
+            <div class="logo-container">
+                <img src="images/dog-close.svg" alt="Scholar Pups Logo 1" class="logo logo1">
+                <img src="images/dog-open.svg" alt="Scholar Pups Logo 2" class="logo logo2">
+            </div>
+            <div class="speech-bubble">
+                <h2>Your personal scholarship coach</h2>
+            </div>
+        </div>
+        <div class="content-bubble" id="sidebar-content">
+            <!-- Dynamic content will be inserted here -->
+        </div>
         <button id="close-sidebar">Close</button>
     </div>
 </body>

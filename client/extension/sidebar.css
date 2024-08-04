@@ -1,7 +1,7 @@
 #sidebar-container {
     position: fixed;
     top: 0;
-    right: 0;
+    /* right: -300px; */
     width: 300px;
     height: 100%;
     background-color: white;
@@ -9,7 +9,47 @@
     overflow-y: auto;
     z-index: 1000;
     padding: 20px;
-    display: none; /* Hide initially */
+    transition: right 0.5s ease; /* Transition effect */
+}
+
+#sidebar-container.visible {
+    right: 0; /* Slide in */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: opacity 1s ease-in-out;
+}
+
+.logo1 {
+    animation: fadeInOut 4s infinite;
+}
+
+.logo2 {
+    animation: fadeInOut 4s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 1; }
 }
 
 #sidebar-container h2 {

@@ -60,6 +60,7 @@ async def review(request: QuestionRequest):
         # await asyncio.sleep(120)  # Delay for 2 seconds
         # return {"review": review}
         if isinstance(request.question, str):
+            
             return f"Review for question: {request.question}"
         else:
             raise HTTPException(status_code=400, detail="Invalid input type")
