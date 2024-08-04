@@ -20,10 +20,10 @@ function copyAndSendTextareas() {
     textarea.select();
     document.execCommand('copy');
     document.body.removeChild(textarea);
-    alert('Copied text to clipboard!\nSending text to API... \n' + allText);
+    // alert('Copied text to clipboard!\nSending text to API... \n' + allText);
     
     const apiUrl = 'http://127.0.0.1:8000/review';  // Ensure your FastAPI server is running on this URL
-    alert('Sending text to API:' + allText);
+    // alert('Sending text to API:' + allText);
 
     fetch(apiUrl, {
         method: 'POST',
@@ -36,18 +36,18 @@ function copyAndSendTextareas() {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
-        alert('response is coming');
+        // alert('response is coming');
         return response.json();
     })
     .then(data => {
-        alert(data);
+        // alert(data);
         message = JSON.stringify(data)
         const responseContainer = document.getElementById('response-container');
         responseContainer.textContent = message;
         responseContainer.style.color = message.startsWith('Error:') ? 'red' : 'green';
     })
     .catch((error) => {
-        alert(error);
+        // alert(error);
         message = error;
         const responseContainer = document.getElementById('response-container');
         responseContainer.textContent = message;
