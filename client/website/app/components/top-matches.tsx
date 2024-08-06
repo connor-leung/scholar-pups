@@ -49,13 +49,13 @@ const TopMatches = () => {
 
                 <div className="bg-white rounded-lg border-2 border-[#f0f0f0] px-8 py-4 flex-1">
                     <div className="flex items-center justify-between mb-4">
-                    <img className="h-20" src="atla.svg" alt="ATLA Logo" />
+                    <img className="h-20" src="ontariopolice.svg" alt="Ontario Police" />
                     <div className="bg-[#73AAE8] rounded-full px-4 py-1 flex items-center" style={{ backgroundColor: 'rgba(115, 170, 232, 0.3)' }}>
-                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk whitespace-nowrap">$4,000 CAD</h1>
+                        <h1 className="text-[#578BC7] text-[12px] font-spaceGrotesk whitespace-nowrap">$3,500 CAD</h1>
                     </div>
                     </div>
-                    <h1 className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Diversity Scholarship</h1>
-                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on May 19th • Canada</h1>
+                    <a href="https://oppa.ca/news/ablegala/" className="text-[#101827] text-[20px] font-spaceGrotesk font-bold whitespace-nowrap">Diversity Scholarship</a>
+                    <h1 className="text-[#808080] text-[13px] whitespace-nowrap">Due on Aug 9th • Canada</h1>
                 </div>
             </div>
         </>
